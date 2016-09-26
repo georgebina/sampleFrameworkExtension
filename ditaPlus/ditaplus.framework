@@ -261,6 +261,57 @@
 											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
 										</field>
 										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
+										</field>
+										<field name="index">
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
@@ -297,23 +348,6 @@
 													</toolbarEntry-array>
 												</field>
 											</toolbar>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<toolbarSeparator/>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
