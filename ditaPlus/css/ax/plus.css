@@ -1,0 +1,66 @@
+/* Inline Hints */
+/*#FFFAD5*/
+/*#FFD34E*/
+/* placeholders */
+/* editors */
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+/* hints */
+shortdesc {
+  position: relative;
+}
+shortdesc:before(5000) {
+  line-height: 1px;
+  width: 1em;
+  display: block;
+  position: absolute;
+  top: 2px;
+  text-align: right;
+  right: 2px;
+  visibility: hidden;
+  content: oxy_button(action, oxy_action(name, '[+]', description, oxy_concat('See description for ', oxy_local-name()), operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', arg-elementLocation, '.', icon, url('img/info16.png'), arg-name, '-oxy-hints'), transparent, true, showIcon, true);
+}
+shortdesc:-oxy-hints:before(5000) {
+  visibility: hidden;
+  content: oxy_button(action, oxy_action(name, '[-]', description, oxy_concat('See description for ', oxy_local-name()), operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation', arg-elementLocation, '.', icon, url('img/info16.png'), arg-name, '-oxy-hints'), transparent, true, hoverPseudoclassName, '-oxy-delete-hints', showIcon, true);
+}
+shortdesc:hover:before(5000) {
+  visibility: visible;
+}
+shortdesc:-oxy-hints:-oxy-hints:-oxy-delete-hints:before(201) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+shortdesc:-oxy-hints:before(201) {
+  display: block;
+  border: 1px solid #d89e36;
+  background-color: rgba(255, 250, 213, 0.6);
+  border-radius: 8px;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem;
+  padding-right: 1.2rem;
+  content: oxy_htmlContent(href, 'hints.html', id, oxy_concat('hints', '-', oxy_local-name()), width, 100%);
+}
+/* placeholders */
+shortdesc:empty {
+  color: #555555 !important;
+  -oxy-show-placeholder: always;
+  -oxy-placeholder-content: "Describe shortly the topic content";
+}
+@media oxygen-high-contrast-black, oxygen-dark-theme {
+  shortdesc:empty {
+    color: white!important;
+  }
+}
+/* make links editable */
+xref:after(10) {
+  content: oxy_button(transparent, true, action, oxy_action(name, 'Edit', description, 'Edit', icon, url('img/edit16.png'), operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-setPseudoClassNames, '-oxy-edit'), showIcon, true);
+}
+xref:-oxy-edit:after(10) {
+  content: oxy_button(transparent, true, action, oxy_action(name, 'Done', description, 'Done', icon, url('img/done16.png'), operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-edit'), showIcon, true);
+}
+xref:-oxy-edit:after {
+  text-decoration: none;
+  content: "\A" oxy_label(text, "  URL:", width, 20%, color, inherit) oxy_textfield(edit, '@href', width, 70%) "\A" oxy_label(text, "  Format:", width, 20%, color, inherit) oxy_combobox(edit, '@format', width, 70%, editable, true) "\A" oxy_label(text, "  Scope:", width, 20%, color, inherit) oxy_combobox(edit, '@scope', width, 70%, editable, true) "\A" oxy_label(text, "  Keyref:", width, 20%, color, inherit) oxy_combobox(edit, '@keyref', width, 70%, editable, true);
+}

@@ -1,0 +1,19 @@
+@import "library.less";
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+
+/* hints */
+shortdesc           {.hint();}
+
+/* placeholders */
+shortdesc           {.placeholder("Describe shortly the topic content");}
+
+/* make links editable */
+xref {.editableInline();}
+
+xref:-oxy-edit:after {
+    text-decoration : none;
+    .textfield("  URL:", "href");
+    .combobox( "  Format:", "format");
+    .combobox( "  Scope:", "scope");
+    .combobox( "  Keyref:", "keyref");
+}
