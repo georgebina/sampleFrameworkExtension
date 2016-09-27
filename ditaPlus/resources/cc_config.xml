@@ -9,5 +9,9 @@
     xmlns="http://www.oxygenxml.com/ns/ccfilter/config">
 
     <elementProposals rejectElements="b i u"/>
+    <elementProposals path="section" insertElements="title p"/>
 
+    <elementRenderings>
+        <render element="shortdesc" as="Short Description"/>
+    </elementRenderings>
 </config>
