@@ -5,7 +5,8 @@
 
     <sch:pattern>
         <sch:rule context="p">
-            <sch:report test="starts-with(., 'Warning:')" role="warning" sqf:fix="createWarningFromParagraph">
+            <sch:report test="starts-with(., 'Warning:')" role="warning" sqf:fix="createWarningFromParagraph"
+                see="http://www.oxygenxml.com/styleguide/notes.html">
                 Warning notes should be marked up with a "note" 
                 element setting its "type" attribute to "warning"!
             </sch:report>
