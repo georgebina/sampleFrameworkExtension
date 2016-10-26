@@ -9,4 +9,4 @@ It features:
 - Restricting the DITA vocabulary without schema specialization
 - Schematron checks with quick-fixes
 
-This repository contains the code used for these slides.
+This repository contains the code used for [these slides](http://www.slideshare.net/IXIASOFT/maximize-your-oxygen-usage-oxygen-xml-syncro-soft).
